@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coldplay Official Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="left-align">
+            <img src="assets/imgs/logo.jpeg" height="50px" width="auto">
+        </div>
+        <div class="right-align">
+            <a href="index.html" class="navbar-menu">HOME</a>
+            <a href="about.html" class="navbar-menu">ABOUT</a>
+            <a href="personil.html" class="navbar-menu">PERSONIL</a>
+            <a href="contact.html" class="navbar-menu">CONTACT</a>
+        </div>
+    </div>
+    <div class="hero-section">
+        <h1 class="hero-title">Contact <span class="bold-text">COLDPLAY</span></h1>
+    </div>
+
+    <div class="container mt-4 mb-4">
+        <h1 class="form-title mb-4">Contact Form</h1>
+
+        <div class="form-group mt-1">
+            <label name="nama">Nama</label>
+            <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukan Nama">
+        </div>
+
+
+        <div class="form-group mt-1">
+            <label name="no_telp">Nomor Telp</label>
+            <input type="text" name="no_telp" id="no_telp" class="form-control" placeholder="Masukan Nomor Telp">
+        </div>
+
+
+        <div class="form-group mt-1">
+            <label name="pesan">Pesan</label>
+            <textarea name="pesan" id="pesan" rows="5" class="form-control" placeholder="Masukan Pesan"></textarea>
+        </div>
+
+        <button id="submitButton" class="btn btn-primary btn-block mt-1">Submit</button>
+
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <h1 class="contact-title">No Telp</h1>
+                <h1 class="contact-description">08123456788</h1>
+            </div>
+            <div class="col-md-3">
+                <h1 class="contact-title">Email</h1>
+                <h1 class="contact-description">contact@coldplay.com</h1>
+            </div>
+            <div class="col-md-3">
+                <h1 class="contact-title">Instagram</h1>
+                <h1 class="contact-description">@coldplay</h1>
+            </div>
+            <div class="col-md-3">
+                <h1 class="contact-title">Alamat</h1>
+                <h1 class="contact-description">Jl Soekarno Hatta RT 1 No 1</h1>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script>
+
+        var button = document.getElementById('submitButton');
+        button.onclick = function(){
+            var nama    = document.getElementById('nama').value;
+            var no_telp = document.getElementById('no_telp').value;
+            var pesan   = document.getElementById('pesan').value;
+            
+            var pesanWhatsapp = "Nama: " + nama + " | No Telp: " + no_telp + " | Pesan: " + pesan;
+            window.location.href = "https://wa.me/6281298977927?text=" + pesanWhatsapp;
+        }
+
+    </script>
+</body>
+</html>
